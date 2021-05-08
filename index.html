@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #mydiv{
+            height: 200px;
+            width: 600px;
+            border-radius: 30px;
+
+ 
+
+        }
+    </style>
+</head>
+<body onload="generatecolor()">
+<body>
+    <div>
+        <h1>DOM Events</h1>
+        <button ondblclick="this.innerHTML = ' Button Is Clicked Double Times'">Click </button>
+
+        <button onclick="generatecolor()">Change Backgroud Color</button>
+        <button ></button>
+        <br><br>
+        <div id="mydiv">
+            
+        </div>
+        <div class="container">
+            <div id="color-box">
+                <button id="color_changer">Click Me!</button>
+
+            </div>
+
+
+        </div>
+
+        <script>
+            
+            function generatecolor(){
+                var x = Math.floor(Math.random() * 256);
+                var y =  Math.floor(Math.random() * 256);
+                var z = Math.floor(Math.random() * 256);
+
+                var x1 = Math.floor(Math.random() * 256);
+                var y1 =  Math.floor(Math.random() * 256);
+                var z1 = Math.floor(Math.random() * 256);
+
+                var mycolor = "rgb("+ x + " ," + y +"," + z + ")";
+                console.log(mycolor);
+                var mycolor1 = "rgb("+ x1 + " ," + y1 +"," + z1 + ")";
+                console.log(mycolor1);
+              
+
+                document.getElementById('mydiv').style.backgroundColor = mycolor1;
+
+ 
+
+            }
+        </script>
+
+ 
+
+    </div>
+    
+</body>
+</html>
+
